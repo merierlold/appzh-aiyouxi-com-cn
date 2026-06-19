@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://merierlold.github.io/appzh-aiyouxi-com-cn/sitemap.xml
