@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九游app · 查询与对照说明页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #fafafa;
+            color: #2c2e30;
+            line-height: 1.7;
+        }
+
+        /* -- 深色头图 -- */
+        .hero {
+            background: linear-gradient(145deg, #0b141f 0%, #1e2a39 100%);
+            padding: 4rem 1.5rem 3.2rem;
+            text-align: center;
+            color: #eaeff5;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
+        .hero p {
+            font-size: 1rem;
+            max-width: 680px;
+            margin: 0 auto;
+            opacity: 0.88;
+            color: #cbd5e1;
+        }
+        .hero .badge {
+            display: inline-block;
+            margin-top: 1.6rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: #b0c7dd;
+        }
+
+        /* -- 浅色正文区 -- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.2rem;
+        }
+        section {
+            background: #ffffff;
+            margin: 2rem auto;
+            padding: 2.2rem 2rem;
+            border-radius: 24px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.02), 0 1px 4px rgba(0,0,0,0.03);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+            color: #1b2836;
+            position: relative;
+            padding-left: 0.8rem;
+            border-left: 4px solid #3b7fb0;
+        }
+
+        p, li {
+            margin-bottom: 0.9rem;
+            color: #3b3f44;
+        }
+        ul {
+            padding-left: 1.4rem;
+            list-style: none;
+        }
+        ul li {
+            position: relative;
+            padding-left: 1.4rem;
+            margin-bottom: 0.8rem;
+        }
+        ul li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: #3b7fb0;
+            font-weight: bold;
+        }
+
+        /* 强调色链接 */
+        a {
+            color: #1f6d9e;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        a:hover {
+            color: #0b4a72;
+            border-bottom-color: #0b4a72;
+        }
+
+        .highlight {
+            background: #eff6fb;
+            padding: 1.2rem 1.5rem;
+            border-radius: 14px;
+            margin: 1.6rem 0 0.6rem;
+        }
+
+        .faq-item {
+            margin: 1.2rem 0;
+        }
+        .faq-item strong {
+            display: block;
+            font-weight: 550;
+            color: #1e2a39;
+            margin-bottom: 0.25rem;
+        }
+
+        .cta-note {
+            background: #f2f5f9;
+            border-left: 4px solid #3b7fb0;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-size: 0.95rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 1.9rem; }
+            section { padding: 1.6rem 1.2rem; }
+            .hero { padding: 3rem 1.2rem 2.4rem; }
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #7b8590;
+            padding: 2.5rem 1rem 3rem;
+            border-top: 1px solid #e9ecef;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>九游app · 检索与对照笔记</h1>
+    <p>一份围绕日常查询、资料对照和延伸阅读整理的说明页，帮你快速定位信息、了解特点与使用场景。</p>
+    <span class="badge">信息整理 · 2025</span>
+</div>
+
+<div class="container">
+
+    <!-- 摘要 -->
+    <section>
+        <h2>页面摘要</h2>
+        <p>许多人在查找应用信息时，会先浏览官方介绍、用户评价、版本对比等几个方面。本页以 <strong>「整理型查阅」</strong> 为初衷，将关于 <a href="https://cn-9gameapp.com">九游app</a> 的常见关注点 —— 功能亮点、适用场景、使用提示 —— 聚合成一份可供对照的参考。你可以快速扫读，也可以按需深入。</p>
+        <p>以下内容不构成推荐或评级，仅作客观梳理，具体体验建议以实际使用为准。</p>
+    </section>
+
+    <!-- 亮点 & 特点 -->
+    <section>
+        <h2>功能亮点速览</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1rem 0 0.5rem;">
+            <div style="flex: 1 1 180px; background: #f8faff; padding: 1rem 1.2rem; border-radius: 16px;">
+                <div style="font-weight: 550; color: #1f5070;">📋 多维检索</div>
+                <div style="font-size: 0.9rem; margin-top: 0.3rem;">按类别、热度、更新时间筛选，方便横向对照</div>
+            </div>
+            <div style="flex: 1 1 180px; background: #f8faff; padding: 1rem 1.2rem; border-radius: 16px;">
+                <div style="font-weight: 550; color: #1f5070;">🔄 版本动态</div>
+                <div style="font-size: 0.9rem; margin-top: 0.3rem;">更新日志与历史记录清晰，利于回溯变化</div>
+            </div>
+            <div style="flex: 1 1 180px; background: #f8faff; padding: 1rem 1.2rem; border-radius: 16px;">
+                <div style="font-weight: 550; color: #1f5070;">📖 延伸阅读</div>
+                <div style="font-size: 0.9rem; margin-top: 0.3rem;">关联的说明、指南、常见问题可一并查阅</div>
+            </div>
+        </div>
+        <p style="margin-top: 1.2rem;">如果你正在做资料收集或功能对比，不妨将 <a href="https://cn-9gameapp.com">九游app</a> 作为一个信息起点，再结合自己的实际需求去验证和筛选。</p>
+    </section>
+
+    <!-- 使用建议 / 场景 -->
+    <section>
+        <h2>适用场景与建议</h2>
+        <ul>
+            <li><strong>日常查询：</strong> 想快速了解某款应用的基本信息、版本号、权限说明等，直接检索即可获取条目式结果。</li>
+            <li><strong>功能对照：</strong> 同时关注多款同类应用时，可利用列表视图比较核心描述、更新日期与大小，辅助判断。</li>
+            <li><strong>延伸阅读：</strong> 部分条目附带了相关说明或引用来源，适合需要进一步了解背景或细节的场景。</li>
+        </ul>
+        <div class="highlight">
+            <strong>一个小建议：</strong> 初次使用时可先浏览分类或热门列表，熟悉内容组织方式；之后按关键词查找会更有方向。
+        </div>
+    </section>
+
+    <!-- 可信但克制的访问说明 -->
+    <section>
+        <h2>访问与阅读提示</h2>
+        <p>本页面仅作信息整理与引导，不替代官方条款或用户协议。在访问 <a href="https://cn-9gameapp.com">九游app</a> 时，建议留意以下三点：</p>
+        <ul>
+            <li>内容以页面实际展示为准，部分描述可能随时间更新，请以最新版本为准。</li>
+            <li>使用过程中如遇到权限、付费或隐私相关说明，建议仔细阅读对应页面或官方文档。</li>
+            <li>本页不做排名、不提供下载链接，仅作为了解与对照的辅助参考。</li>
+        </ul>
+        <div class="cta-note">
+            💡 如果你正在查找特定版本或功能细节，直接通过站内搜索或分类过滤往往会更高效。
+        </div>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+        <h2>常见关注点摘要</h2>
+        <div class="faq-item">
+            <strong>▸ 信息更新频率如何？</strong>
+            <p>一般会跟随版本发布进行同步，历史记录与当前版本均可查阅。具体以页面显示为准。</p>
+        </div>
+        <div class="faq-item">
+            <strong>▸ 能否看到历史版本说明？</strong>
+            <p>部分条目提供更新日志或版本归档，可回溯主要变化。如果没有找到，可使用搜索功能尝试。</p>
+        </div>
+        <div class="faq-item">
+            <strong>▸ 内容有偏差怎么办？</strong>
+            <p>本页旨在引用和整理公开可查的信息，如果你发现明显差异，建议以 <a href="https://cn-9gameapp.com">九游app</a> 页面实际显示为准。</p>
+        </div>
+    </section>
+
+    <!-- 简短的延伸提醒 -->
+    <section style="background: #fafcfe; box-shadow: none; border: 1px solid #e3eaf1;">
+        <p style="margin-bottom: 0;">⚠️ 本页所有描述均基于可查的界面与公开信息整理，不构成任何形式的担保或邀约。使用前请结合自身判断。</p>
+    </section>
+
+</div>
+
+<footer>
+    <span>整理自公开信息 · 仅供参考</span>
+</footer>
+
+</body>
+</html>
