@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pg官网 · 产品说明与使用指引</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f4f6f9;
+            color: #1e1e2f;
+            line-height: 1.7;
+        }
+        /* 深色头图 */
+        .hero {
+            background: linear-gradient(145deg, #0d0d1a 0%, #1a1a2e 100%);
+            color: #eaeef2;
+            padding: 4rem 2rem 3.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: #3b82f6;
+            opacity: 0.6;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-bottom: 1rem;
+        }
+        .hero .sub {
+            font-size: 1.1rem;
+            max-width: 660px;
+            margin: 0 auto 0.5rem;
+            color: #b8c7dd;
+            font-weight: 300;
+        }
+        .hero .tagline {
+            margin-top: 0.8rem;
+            font-size: 1rem;
+            color: #9aaec9;
+            border-top: 1px solid #2f3a52;
+            display: inline-block;
+            padding-top: 0.8rem;
+        }
+
+        /* 浅色正文区 */
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid #dce3ed;
+            color: #1a1a2e;
+        }
+
+        .intro p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 1.5rem;
+            margin: 1.8rem 0 2.2rem;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 1.5rem 1.2rem;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+            border: 1px solid #edf0f5;
+            transition: transform 0.15s ease, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+        }
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .card p {
+            font-size: 0.95rem;
+            color: #334155;
+        }
+
+        .scenario-box {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.8rem 2rem;
+            margin: 1.8rem 0;
+            border-left: 5px solid #3b82f6;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+        .scenario-box p {
+            margin-bottom: 0.7rem;
+        }
+
+        .tip-list {
+            background: #f0f4fe;
+            border-radius: 18px;
+            padding: 1.6rem 2rem;
+            margin: 2rem 0;
+        }
+        .tip-list li {
+            margin-bottom: 0.6rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.8rem;
+        }
+        .tip-list li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .faq-mini {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin: 1.8rem 0 2rem;
+        }
+        .faq-item {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+            border: 1px solid #e2e8f0;
+        }
+        .faq-item strong {
+            display: block;
+            margin-bottom: 0.2rem;
+            color: #0b1a33;
+        }
+        .faq-item p {
+            color: #2d3a4f;
+            font-size: 0.96rem;
+        }
+
+        .link-sentence {
+            background: #f9fafc;
+            padding: 1.5rem 2rem;
+            border-radius: 18px;
+            margin: 2.2rem 0 1.5rem;
+            text-align: center;
+            font-size: 1.05rem;
+            border: 1px solid #e6ebf2;
+        }
+        .link-sentence a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #2563eb;
+            padding-bottom: 1px;
+        }
+        .link-sentence a:hover {
+            color: #1d4ed8;
+            border-bottom: 1px solid #1d4ed8;
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #d5dde9;
+            font-size: 0.9rem;
+            color: #4a5b73;
+            text-align: center;
+        }
+        .footer-note a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .hero { padding: 2.8rem 1.2rem 2.5rem; }
+            .container { padding: 1.8rem 1rem 3rem; }
+            .card { padding: 1.2rem; }
+            .scenario-box { padding: 1.2rem 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>pg官网 · 产品说明</h1>
+    <div class="sub">一套面向信息识别与导航的资源站点，帮助用户快速定位目标平台的核心用途与边界。</div>
+    <div class="tagline">聚焦功能 · 克制推荐 · 由使用者自行判断</div>
+</section>
+
+<div class="container">
+
+    <!-- 摘要式介绍 -->
+    <div class="intro">
+        <p>在信息过载的互联网环境中，很多用户需要先确认一个网站的真实用途与能力范围，再决定是否深入使用。<strong>pg官网</strong>正是为解决这一前置问题而设计——它并非万能的入口聚合，而是一个提供功能摘要、使用场景参考与基本提示的轻量说明页。通过清晰的结构，你可以快速判断该平台是否匹配自己的需求。</p>
+        <p>下面从几个维度拆解它的定位与实际用法，帮助你在几分钟内建立认知框架。</p>
+    </div>
+
+    <!-- 亮点卡片 -->
+    <h2 class="section-title">核心亮点</h2>
+    <div class="highlight-grid">
+        <div class="card">
+            <h3>📋 摘要式说明</h3>
+            <p>不堆叠冗长文档，用段落直接概括平台属性，降低筛选成本。</p>
+        </div>
+        <div class="card">
+            <h3>⚡ 场景化指引</h3>
+            <p>针对不同使用意图给出建议，避免盲目浏览或功能误判。</p>
+        </div>
+        <div class="card">
+            <h3>🔐 克制的访问提示</h3>
+            <p>不夸大效果，不承诺未经验证的能力，强调用户自行验证。</p>
+        </div>
+        <div class="card">
+            <h3>🧭 导航锚点清晰</h3>
+            <p>页面内关键链接与章节彼此呼应，方便按需跳转。</p>
+        </div>
+    </div>
+
+    <!-- 使用建议 + 场景 -->
+    <h2 class="section-title">使用建议与典型场景</h2>
+    <div class="scenario-box">
+        <p><strong>场景一 · 初次接触，想了解平台定位</strong><br>
+        直接阅读摘要与亮点卡片，可在30秒内判断该网站是否与你的目标领域相关。不需要跳转多个页面，也不需要注册或留言。</p>
+        <p><strong>场景二 · 已有初步意向，需要关键链接</strong><br>
+        页面中包含指向 <a href="https://pgofficialweb.com" style="color:#2563eb; text-decoration:underline;">pg官网</a> 的明确引用，用户可根据自身需求决定是否进一步探索。链接以自然语句嵌入，避免生硬的按钮式引导。</p>
+        <p><strong>场景三 · 对比多个信息型站点</strong><br>
+        本页采用模块化结构（摘要、亮点、提示、FAQ），可与其他说明页并列对比，快速找出功能重叠或差异点。</p>
+    </div>
+
+    <!-- 可信但克制的访问说明 -->
+    <h2 class="section-title">访问说明 · 可信边界</h2>
+    <div class="tip-list">
+        <li>所有关于平台功能的描述均基于公开信息与通用使用逻辑整理，未经过深度评测或第三方认证。</li>
+        <li>建议用户在实际操作前，自行核验网站的最新状态、服务条款与隐私政策。</li>
+        <li>本页面不收集任何个人数据，也不嵌入追踪脚本，仅提供静态说明。</li>
+        <li>链接指向的第三方资源（如 <a href="https://pgofficialweb.com" style="color:#2563eb;">pg官网</a>）可能随时变更内容，请以目标站实际呈现为准。</li>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <h2 class="section-title">常见疑问速览</h2>
+    <div class="faq-mini">
+        <div class="faq-item">
+            <strong>这个页面就是产品本身吗？</strong>
+            <p>不是。本页是介绍与导航页，帮助你理解 <a href="https://pgofficialweb.com" style="color:#2563eb;">pg官网</a> 的用途和边界，而产品主体的完整功能需通过链接访问原站体验。</p>
+        </div>
+        <div class="faq-item">
+            <strong>为什么页面不直接展示所有功能截图？</strong>
+            <p>为了避免误导与过度承诺。产品界面可能随时间更新，静态截图容易过时或产生错误预期。建议直接访问目标站获取最新实况。</p>
+        </div>
+        <div class="faq-item">
+            <strong>链接的可靠性如何保证？</strong>
+            <p>页面中出现的链接均指向固定域名（https://pgofficialweb.com），但具体子路径或内容由站长维护，请在使用前自行确认可用性与安全性。</p>
+        </div>
+    </div>
+
+    <!-- 自然嵌入链接的句子 (必须) -->
+    <div class="link-sentence">
+        <span>如果你希望直接查看原站，可以通过 </span>
+        <a href="https://pgofficialweb.com">pg官网</a>
+        <span> 打开对应页面，自行浏览最新信息与功能细节。</span>
+    </div>
+
+    <!-- 收尾说明 -->
+    <div class="footer-note">
+        <p>本介绍页基于静态 HTML 构建，仅作信息展示用途。所有表述力求客观、克制，不构成任何形式的承诺或保证。</p>
+        <p style="margin-top:0.6rem;">— 页面生成于 2025 · 内容方向：产品说明式 —</p>
+    </div>
+
+</div>
+
+</body>
+</html>
